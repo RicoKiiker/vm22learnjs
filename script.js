@@ -1,26 +1,47 @@
-console.log('hello world')
+let boolean = true
+console.log(boolean);
+boolean = false
+console.log(boolean);
+boolean = true && false && true;
+console.log(boolean);
+boolean = true || false || true;
+console.log(boolean);
+boolean = !true;
+console.log(boolean);
+boolean = true && false || true && !false;
+console.log(boolean);
+num = '10';
+boolean = num > 10;
+boolean = num < 10;
+boolean = num == 10;
+boolean = num === 10; // checks type and value
+boolean = num >= 10;
+boolean = num <= 10;
+boolean = num != 10;
+boolean = num !== 10; // checks type and value
+console.log(boolean);
 
-let num = 1;
-num = 3;
-num = 3 * 3 + 7 / 2 -15;
-num = num + 3;
-num += 3;
-num -= 2;
-num *= 3;
-num /= 2;
-num ++;
-num --;
-num = num **2;
-num **=2;
-num = 13;
-num = num % 7;
-num %= 2;
-//var text = 'Hello'; Dont use var
+if(num == 10) {
+    console.log('võrdne kümnega');
+} else {
+    console.log('ei ole võrdne kümnega');
+} 
+
+console.log(Boolean(num));
+console.log(Boolean('asdasd'));
+console.log(Boolean(0));
+console.log(Boolean(''));
+
+let noValue = null;
+let novalue2
+console.log(noValue);
+console.log(novalue2);
+num = 1/0
 console.log(num);
-let string = 'Hello';
-string = "Hello don't";
-string = `hello
-im multi line
-string`;
-string = `Hello number is: ${num}`;
-string = 'Hello number is: ' + num;
+num = -1/0;
+console.log(num);
+num = 0/0;
+console.log(num);
+num = 0 * -1;
+num = 0.1+ 0.2;
+console.log(num);
