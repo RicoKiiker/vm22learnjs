@@ -1,9 +1,22 @@
-const fs = require('fs');
+const express = require('express');
+const app = express();
+const nunjucks = require('nunjucks')
 
-let files = fs.readdirSync('.');
-console.log(files);
+nunjucks.configure('views', {
+    autoescape: true,
+    express: app
+});
 
-fs.writeFileSync('hello.txt', 'Hello!', {flag: 'a'});
 
-let html = fs.readFileSync('index.html');
-console.log(html.toString());
+app.get('/', function (req, res) {
+    let name = "Rico Kiiker"
+    res.render('index.njk', {name});
+});
+
+app.get('/about', function (req, res) {
+    res.render('about.njk');
+});
+
+
+app.listen(3000);
+console.log('Server started on http://localhost:3000');
