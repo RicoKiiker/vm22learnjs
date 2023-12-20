@@ -4,14 +4,16 @@
 {% if name and age %}
     <h1>Hello {{ name }} you are {{age}} years old!</h1>
 {% endif %}
-<form action="/answer" method="POST">
+<h1>a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup><h1>
+
+<form action="/" method="">
         <div class="mb-3">
-  <label for="name" class="form-label">Name</label>
-  <input type="text" class="form-control" name="name" id="name" placeholder="Name here">
+  <label for="sideA" class="form-label">A</label>
+  <input type="number" class="form-control" name="sideAgo" id="sideA" placeholder="a">
     </div>
     <div class="mb-3">
-  <label for="age" class="form-label">Age</label>
-  <input type="number" min="0" max="150" class="form-control" name="age" id="age" placeholder="How old are you?">
+  <label for="sideB" class="form-label">B</label>
+  <input type="number" min="0" max="150" class="form-control" name="sideB" id="age" placeholder="b">
 </div>
 <div class="mb-3">
     <input type="submit" class="btn btn-primary">
