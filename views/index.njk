@@ -1,10 +1,14 @@
 {% extends 'partials/layout.njk' %}
 {% block title %}Home page{% endblock %}
 {% block content %}
-{% if name and age %}
-    <h1>Hello {{ name }} you are {{age}} years old!</h1>
+{% if a and b %}
 {% endif %}
 <h1>a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup><h1>
+
+{% if sideA and sideB %}
+{% set sideC = (sideA ** 2 + sideB ** 2) ** 0.5 %}
+
+{% endif %}
 
 <form action="/" method="">
         <div class="mb-3">
@@ -19,4 +23,12 @@
     <input type="submit" class="btn btn-primary">
     </div>
 </form>
+
+<div id="resultContainer">
+{% if sideA is defined and sideB is defined %}
+{% set sideC = (sideA **2 + sideB ** 2) ** 0.5 %}
+<h2>Pikkus C on {{ sideC.toFixed(2) }}</h2>
+{% endif %}
+</div>
+
 {% endblock %}
