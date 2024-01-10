@@ -13,11 +13,11 @@
 <form action="/" method="">
         <div class="mb-3">
   <label for="sideA" class="form-label">A</label>
-  <input type="number" class="form-control" name="sideAgo" id="sideA" placeholder="a">
+  <input type="number" class="form-control" name="sideA" id="sideA" placeholder="a">
     </div>
     <div class="mb-3">
   <label for="sideB" class="form-label">B</label>
-  <input type="number" min="0" max="150" class="form-control" name="sideB" id="age" placeholder="b">
+  <input type="number" class="form-control" name="sideB" id="age" placeholder="b">
 </div>
 <div class="mb-3">
     <input type="submit" class="btn btn-primary">
@@ -26,7 +26,7 @@
 
 <div id="resultContainer">
 {% if sideA is defined and sideB is defined %}
-{% set sideC = (sideA **2 + sideB ** 2) ** 0.5 %}
+{% set sideC = (sideA ** 2 + sideB ** 2) ** 0.5 %}
 <h2>Pikkus C on {{ sideC.toFixed(2) }}</h2>
 {% endif %}
 </div>
